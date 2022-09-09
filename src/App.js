@@ -1,27 +1,35 @@
+import React, { useState } from 'react';
 import NoteList from "./components/NoteList";
+import {nanoid} from "nanoid";
 
-const notes = [
+
+const dummyNotes = [
   {
-  id:"1",
-  text: "note one",
-  data: "10/10/2022"
-},
-{
-  id:"1",
-  text: "note 2",
-  data: "10/10/2022"
-},
-{
-  id:"1",
-  text: "note 3",
-  data: "10/10/2022"
-}
-]
+    key: nanoid(),
+    text: "note one",
+    data: "10/10/2022",
+  },
+  {
+    key: nanoid(),
+    text: "note 2",
+    data: "10/10/2022",
+  },
+  {
+    key: nanoid(),
+    text: "note 3",
+    data: "10/10/2022",
+  },
+];
 
-const App = (prop) => {
+
+
+const App = () => {
+
+  const [note,setNote] = useState(dummyNotes);
+
   return (
-    <div>
-      <NoteList prop={notes}/>
+    <div className='container'>
+      <NoteList note={note}/>
     </div>
   );
 };

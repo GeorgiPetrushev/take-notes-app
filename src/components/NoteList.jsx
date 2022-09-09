@@ -1,11 +1,13 @@
 import React from "react";
 import Note from "./Note";
 
-const NoteLins = (notes) => {
-  console.log(notes);
-  console.log(notes.prop);
-  const newNoteList = notes.prop.map(() => <Note />);
-  return <div>{newNoteList}</div>;
+const NoteLins = ({note}) => {
+  const newNoteList = note.map((note) => <Note 
+    key={note.key}
+    text={note.text}
+    data={note.data}
+  />);
+  return <div className="note-list">{newNoteList}</div>;
 };
 
 export default NoteLins;
