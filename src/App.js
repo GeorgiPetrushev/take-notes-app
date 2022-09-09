@@ -19,6 +19,16 @@ const dummyNotes = [
     text: "note 3",
     data: "10/10/2022",
   },
+  {
+    key: nanoid(),
+    text: "note 3",
+    data: "10/10/2022",
+  },
+  {
+    key: nanoid(),
+    text: "note 3",
+    data: "10/10/2022",
+  },
 ];
 
 

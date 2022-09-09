@@ -1,12 +1,17 @@
 import React from "react";
-const Note = ({id,text,data}) => {
+import { AiFillDelete } from "react-icons/ai";
+import NoteStyle from "./style/note.style";
 
-  return <div className="note">
-    <div>{text}</div>
-    <div>{data}</div>
-  
-  
-  </div>;
+const Note = ({ id, text, data }) => {
+  return (
+    <NoteStyle className="note-container" key={id}>
+      <div className="note-top">{text}</div>
+      <div className="note-bottom">
+        <div>{data}</div>
+        <AiFillDelete className="icon" />
+      </div>
+    </NoteStyle>
+  );
 };
 
 export default Note;
