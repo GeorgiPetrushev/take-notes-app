@@ -4,9 +4,9 @@ import styled from "styled-components";
  display: grid;
  margin: 1.5rem auto;
  padding: 1rem;
- max-width: 960px;
+ max-width: 1160px;
  display: grid;
- grid-template-columns: repeat(auto-fit, minmax(240px ,1fr));
+ grid-template-columns: repeat(auto-fit, minmax(280px ,1fr));
  grid-gap: 1rem;
 `;
 

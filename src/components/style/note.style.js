@@ -5,7 +5,7 @@ const NoteStyle = styled.div`
   padding: 1rem;
   border: 0.5px black solid;
   border-radius: 1rem;
-  min-height: 10rem;
+  min-height: 12rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -16,6 +16,7 @@ const NoteStyle = styled.div`
     .icon{
         font-size: 1.5rem;
         padding: 0.5rem;
+        transition:500ms;
         &:hover{
             background-color: red;
             color: white;
