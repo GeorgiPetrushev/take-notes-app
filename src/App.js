@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import NoteList from "./components/NoteList";
-import {nanoid} from "nanoid";
-
+import { nanoid } from "nanoid";
 
 const dummyNotes = [
   {
@@ -31,15 +30,17 @@ const dummyNotes = [
   },
 ];
 
-
-
 const App = () => {
+  const [note, setNote] = useState(dummyNotes);
 
-  const [note,setNote] = useState(dummyNotes);
+  const addNote = (data) => {
+    const datata = new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) 
+    console.log(datata)
+  };
 
   return (
-    <div className='container'>
-      <NoteList note={note}/>
+    <div className="container">
+      <NoteList note={note}  addNote={addNote}/>
     </div>
   );
 };

@@ -8,7 +8,7 @@ const Note = ({ id, text, data }) => {
       <div className="note-top">{text}</div>
       <div className="note-bottom">
         <div>{data}</div>
-        <AiFillDelete className="icon" />
+        <AiFillDelete className="icon-delete" />
       </div>
     </NoteStyle>
   );

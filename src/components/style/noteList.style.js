@@ -6,7 +6,7 @@ import styled from "styled-components";
  padding: 1rem;
  max-width: 1160px;
  display: grid;
- grid-template-columns: repeat(auto-fit, minmax(280px ,1fr));
+ grid-template-columns: repeat(auto-fit, minmax(300px ,1fr));
  grid-gap: 1rem;
 `;
 
