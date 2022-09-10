@@ -33,14 +33,22 @@ const dummyNotes = [
 const App = () => {
   const [note, setNote] = useState(dummyNotes);
 
-  const addNote = (data) => {
-    const datata = new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) 
-    console.log(datata)
+  const addNote = (text) => {
+    if (text.length > 0) {
+      const data = new Date().toLocaleDateString();
+      const newNote = {
+        key: nanoid(),
+        text: text,
+        data: data,
+      };
+      const newNoteList = [...note, newNote];
+      setNote(newNoteList);
+    }
   };
 
   return (
     <div className="container">
-      <NoteList note={note}  addNote={addNote}/>
+      <NoteList note={note} addNote={addNote} />
     </div>
   );
 };
