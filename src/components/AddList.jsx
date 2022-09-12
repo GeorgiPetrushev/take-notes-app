@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import NoteStyle from "./style/note.style";
 import { IoIosSave } from "react-icons/io";
 
+
 const AddList = ({ addNote }) => {
   const [textValue, setTextValue] = useState("");
   const [dataValue, setDataValue] = useState("");

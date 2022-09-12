@@ -1,37 +1,39 @@
 import React, { useState } from "react";
 import NoteList from "./components/NoteList";
 import { nanoid } from "nanoid";
+import SearchBar from "./components/SearchBar";
 
 const dummyNotes = [
   {
     id: nanoid(),
-    text: "1",
+    text: "Aaaa",
     data: "2022-09-21",
   },
   {
     id: nanoid(),
-    text: "2",
+    text: "aaaBbbb",
     data: "2022-09-21",
   },
   {
     id: nanoid(),
-    text: "3",
+    text: "aaabbbCccc",
     data: "2022-09-21",
   },
   {
     id: nanoid(),
-    text: "4",
+    text: "Dddd",
     data: "2022-09-21",
   },
   {
     id: nanoid(),
-    text: "5",
+    text: "Ffff",
     data: "2022-09-21",
   },
 ];
 
 const App = () => {
   const [note, setNote] = useState(dummyNotes);
+  const [search , setSearch] =useState("");
 
   // ADD NOTE
   const addNote = (text,data) => {
@@ -52,9 +54,14 @@ const App = () => {
     setNote(newNoteList);
   };
 
+
+   
+
+
   return (
     <div className="container">
-      <NoteList note={note} addNote={addNote} deleteNote={deleteNote} />
+      <SearchBar setSearch={setSearch}/>
+      <NoteList note={note.filter((arr) => arr.text.toLowerCase().includes(search))} addNote={addNote} deleteNote={deleteNote} />
     </div>
   );
 };
