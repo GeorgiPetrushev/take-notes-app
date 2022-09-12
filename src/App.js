@@ -1,34 +1,35 @@
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import NoteList from "./components/NoteList";
 import { nanoid } from "nanoid";
 
 const dummyNotes = [
   {
-    key: nanoid(),
-    text: "note one",
+    id: nanoid(),
+    text: "1",
     data: "10/10/2022",
   },
   {
-    key: nanoid(),
-    text: "note 2",
+    id: nanoid(),
+    text: "2",
     data: "10/10/2022",
   },
   {
-    key: nanoid(),
-    text: "note 3",
+    id: nanoid(),
+    text: "3",
     data: "10/10/2022",
   },
   {
-    key: nanoid(),
-    text: "note 3",
+    id: nanoid(),
+    text: "4",
     data: "10/10/2022",
   },
   {
-    key: nanoid(),
-    text: "note 3",
+    id: nanoid(),
+    text: "5",
     data: "10/10/2022",
   },
 ];
+
 
 const App = () => {
   const [note, setNote] = useState(dummyNotes);
@@ -37,7 +38,7 @@ const App = () => {
     if (text.length > 0) {
       const data = new Date().toLocaleDateString();
       const newNote = {
-        key: nanoid(),
+        id: nanoid(),
         text: text,
         data: data,
       };
@@ -46,9 +47,14 @@ const App = () => {
     }
   };
 
+  const deleteNote = (id) =>{
+    const newNoteList = note.filter(arr =>  arr.id !== id );
+    setNote(newNoteList);
+  }
+
   return (
     <div className="container">
-      <NoteList note={note} addNote={addNote} />
+      <NoteList note={note} addNote={addNote} deleteNote={deleteNote} />
     </div>
   );
 };

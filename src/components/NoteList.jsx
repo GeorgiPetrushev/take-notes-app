@@ -3,9 +3,9 @@ import Note from "./Note";
 import NoteListStyle from "./style/noteList.style";
 import AddList from "./AddList";
 
-const NoteList = ({ note, addNote }) => {
+const NoteList = ({ note, addNote , deleteNote}) => {
   const newNoteList = note.map((note) => (
-    <Note key={note.key} text={note.text} data={note.data} />
+    <Note id={note.id} text={note.text} data={note.data} deleteNote={deleteNote} key={note.id} />
   ));
   return (
     <NoteListStyle>
