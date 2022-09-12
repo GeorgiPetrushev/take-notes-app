@@ -6,27 +6,27 @@ const dummyNotes = [
   {
     id: nanoid(),
     text: "1",
-    data: "10/10/2022",
+    data: "9/10/2022",
   },
   {
     id: nanoid(),
     text: "2",
-    data: "10/10/2022",
+    data: "11/10/2022",
   },
   {
     id: nanoid(),
     text: "3",
-    data: "10/10/2022",
+    data: "10/25/2021",
   },
   {
     id: nanoid(),
     text: "4",
-    data: "10/10/2022",
+    data: "10/10/2020",
   },
   {
     id: nanoid(),
     text: "5",
-    data: "10/10/2022",
+    data: "10/9/2022",
   },
 ];
 
