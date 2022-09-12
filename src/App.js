@@ -33,10 +33,11 @@ const dummyNotes = [
 
 const App = () => {
   const [note, setNote] = useState(dummyNotes);
-  const [search , setSearch] =useState("");
+  const [search, setSearch] = useState("");
+  const [searchData, setSearchData] = useState("");
 
   // ADD NOTE
-  const addNote = (text,data) => {
+  const addNote = (text, data) => {
     if (text.length > 0) {
       const newNote = {
         id: nanoid(),
@@ -54,14 +55,14 @@ const App = () => {
     setNote(newNoteList);
   };
 
-
-   
-
-
   return (
     <div className="container">
-      <SearchBar setSearch={setSearch}/>
-      <NoteList note={note.filter((arr) => arr.text.toLowerCase().includes(search))} addNote={addNote} deleteNote={deleteNote} />
+      <SearchBar setSearch={setSearch} setSearchData={setSearchData} />
+      <NoteList
+        note={note.filter((arr) => arr.text.toLowerCase().includes(search)) || note.filter((arr) => arr.data.includes(searchData))}
+        addNote={addNote}
+        deleteNote={deleteNote}
+      />
     </div>
   );
 };

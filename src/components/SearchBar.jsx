@@ -1,9 +1,7 @@
 import React from "react";
 import SearchBarStyle from "./style/search-bar.style";
 
-const SearchBar = ({ setSearch }) => {
-
-
+const SearchBar = ({ setSearch, setSearchData }) => {
   return (
     <SearchBarStyle>
       <div className="search-icon">ICON</div>
@@ -16,7 +14,14 @@ const SearchBar = ({ setSearch }) => {
           setSearch(e.target.value);
         }}
       ></textarea>
-      <input type="date" id="start" name="trip-start"></input>
+      <input
+        type="date"
+        id="start"
+        name="trip-start"
+        onChange={(e) => {
+          setSearchData(e.target.value);
+        }}
+      ></input>
     </SearchBarStyle>
   );
 };
