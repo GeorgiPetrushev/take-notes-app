@@ -59,7 +59,10 @@ const App = () => {
     <div className="container">
       <SearchBar setSearch={setSearch} setSearchData={setSearchData} />
       <NoteList
-        note={note.filter((arr) => arr.text.toLowerCase().includes(search)) || note.filter((arr) => arr.data.includes(searchData))}
+        note={
+          note.filter((arr) => arr.text.toLowerCase().includes(search)) ||
+          note.filter((arr) => arr.data.includes(searchData))
+        }
         addNote={addNote}
         deleteNote={deleteNote}
       />

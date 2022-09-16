@@ -7,7 +7,7 @@ const AddList = ({ addNote }) => {
   const [textValue, setTextValue] = useState("");
   const [dataValue, setDataValue] = useState("");
   const handleChange = (e) => {
-    if (textValue.length < 10) {
+    if (textValue.length < 150) {
       setTextValue(e.target.value);
     }
   };
