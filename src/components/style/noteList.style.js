@@ -7,7 +7,7 @@ import styled from "styled-components";
  max-width: 1160px;
  display: grid;
  grid-template-columns: repeat(auto-fit, minmax(300px ,1fr));
- grid-gap: 1rem;
+ grid-gap: 1.5rem;
 `;
 
 export default NoteListStyle;

@@ -1,18 +1,25 @@
 import styled, { css } from "styled-components";
 
 const NoteStyle = styled.div`
-  background-color: white;
+  background-color: rgb(57,246,24,0.7);
   padding: 1rem;
-  border: 0.5px black solid;
   border-radius: 1rem;
   min-height: 12rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: 1000ms;
+  &:hover{
+    background-color: rgb(57,246,24,1);
+  }
   ${(props) =>
     props.primary &&
     css`
-      background: rgb(0, 204, 255,0.5);
+      background: rgb(0, 204, 255,0.8);
+      transition: 1000ms;
+      &:hover{
+        background: rgb(0, 204, 255,1);
+      }
     `}
 
   .note-bottom {
