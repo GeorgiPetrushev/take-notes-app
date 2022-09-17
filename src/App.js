@@ -7,42 +7,42 @@ const dummyNotes = [
   {
     id: nanoid(),
     text: "Aaaa",
-    data: "2022-09-21",
+    data: "9/16/2022",
   },
   {
     id: nanoid(),
     text: "aaaBbbb",
-    data: "2022-09-21",
+    data: "9/16/2022",
   },
   {
     id: nanoid(),
     text: "aaabbbCccc",
-    data: "2022-09-21",
+    data: "9/16/2022",
   },
   {
     id: nanoid(),
     text: "Dddd",
-    data: "2022-09-21",
+    data: "9/16/2022",
   },
   {
     id: nanoid(),
     text: "Ffff",
-    data: "2022-09-21",
+    data: "9/16/2022",
   },
 ];
 
 const App = () => {
   const [note, setNote] = useState(dummyNotes);
   const [search, setSearch] = useState("");
-  const [searchData, setSearchData] = useState("");
 
   // ADD NOTE
-  const addNote = (text, data) => {
+  const addNote = (text) => {
     if (text.length > 0) {
+      const date = new Date();
       const newNote = {
         id: nanoid(),
         text: text,
-        data: data,
+        data: date.toLocaleDateString(),
       };
       const newNoteList = [...note, newNote];
       setNote(newNoteList);
@@ -57,12 +57,9 @@ const App = () => {
 
   return (
     <div className="container">
-      <SearchBar setSearch={setSearch} setSearchData={setSearchData} />
+      <SearchBar setSearch={setSearch} />
       <NoteList
-        note={
-          note.filter((arr) => arr.text.toLowerCase().includes(search)) ||
-          note.filter((arr) => arr.data.includes(searchData))
-        }
+        note={note.filter((arr) => arr.text.toLowerCase().includes(search))}
         addNote={addNote}
         deleteNote={deleteNote}
       />
