@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/take-notes-app/static/css/main.89d56b61.css",
+    "main.js": "/take-notes-app/static/js/main.495a5f62.js",
+    "static/media/background-img.jpg": "/take-notes-app/static/media/background-img.cfce682ddd1adeeb346c.jpg",
+    "index.html": "/take-notes-app/index.html",
+    "main.89d56b61.css.map": "/take-notes-app/static/css/main.89d56b61.css.map",
+    "main.495a5f62.js.map": "/take-notes-app/static/js/main.495a5f62.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89d56b61.css",
+    "static/js/main.495a5f62.js"
+  ]
+}
