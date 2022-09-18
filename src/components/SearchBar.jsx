@@ -11,7 +11,7 @@ const SearchBar = ({ setSearch }) => {
         name="text"
         cols="28"
         rows="1"
-        placeholder="Note Search ..."
+        placeholder="Note Search..."
         onChange={(e) => {
           setSearch(e.target.value);
         }}
