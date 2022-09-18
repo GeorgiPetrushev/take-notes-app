@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderStyle from "./style/header.style";
-import {TbPoint} from "react-icons/tb"
+import {FaDotCircle} from "react-icons/fa"
 
 const Header = ({ setDarkMode, darkMode }) => {
   const changeMode = () => {
@@ -9,7 +9,7 @@ const Header = ({ setDarkMode, darkMode }) => {
   return (
     <HeaderStyle>
       <div className="logo">Notes</div>
-      <button onClick={changeMode} >Dark Mode <TbPoint className={ darkMode ? "dote" : "dote-active"}/></button>
+      <button onClick={changeMode}className={ darkMode ? "on" : "off"}>Dark Mode <FaDotCircle className="icon"/> </button>
     </HeaderStyle>
   );
 }; 

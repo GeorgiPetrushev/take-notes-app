@@ -14,16 +14,27 @@ const HeaderStyle = styled.div`
     button{
         font-size: 1.5rem;
         border-radius: 1rem;
+        padding: 0.5rem;
         border: none;
         display: flex;
         align-items: center;
     }
  
-    .dote{
-        color: green;
+    .on{
+        color: white;
+        background-color: rgb(33, 33, 33);
+        .icon{
+            color: green;
+        }
+
+
     }
-    .dote-active{
-        color: red;
+    .off{
+        color: black;
+        background-color: gray;
+        .icon{
+            color: red;
+        }
     }
 `;
 
