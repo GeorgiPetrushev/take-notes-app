@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const AppStyle = styled.div`
+
 .dark-off{
     padding: 1rem;
     min-height: 100vh;

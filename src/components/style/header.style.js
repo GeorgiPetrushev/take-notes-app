@@ -14,6 +14,7 @@ const HeaderStyle = styled.div`
     button{
         font-size: 1.5rem;
         border-radius: 1rem;
+        border: none;
         display: flex;
         align-items: center;
     }
