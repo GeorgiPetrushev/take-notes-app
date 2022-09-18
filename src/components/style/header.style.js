@@ -14,6 +14,15 @@ const HeaderStyle = styled.div`
     button{
         font-size: 1.5rem;
         border-radius: 1rem;
+        display: flex;
+        align-items: center;
+    }
+ 
+    .dote{
+        color: green;
+    }
+    .dote-active{
+        color: red;
     }
 `;
 

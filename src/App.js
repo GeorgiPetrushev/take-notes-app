@@ -4,12 +4,12 @@ import { nanoid } from "nanoid";
 import SearchBar from "./components/SearchBar";
 import Header from "./components/Header";
 import { dummyNotes } from "./dummy-data";
-
+import { AppStyle } from "./components/style/app.style";
 
 const App = () => {
   const [note, setNote] = useState(dummyNotes);
   const [search, setSearch] = useState("");
-  const [darkMode, setDarkMode] =useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   // ADD NOTE
   const addNote = (text) => {
@@ -31,16 +31,23 @@ const App = () => {
     setNote(newNoteList);
   };
 
+
+
   return (
-    <div className="container">
-      <Header setDarkMode={setDarkMode} darkMode={darkMode} />
+    <AppStyle>
+      <div className={darkMode ? "dark" : "dark-off"}>
+      <Header
+        setDarkMode={setDarkMode}
+        darkMode={darkMode}
+      />
       <SearchBar setSearch={setSearch} />
       <NoteList
         note={note.filter((arr) => arr.text.toLowerCase().includes(search))}
         addNote={addNote}
         deleteNote={deleteNote}
       />
-    </div>
+      </div>
+    </AppStyle>
   );
 };
 

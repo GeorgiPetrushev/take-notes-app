@@ -3,7 +3,7 @@ import styled from "styled-components";
 const SearchBarStyle = styled.div`
   margin: auto;
   margin-top: 1rem;
-  background-color: rgb(143, 143, 143, 0.9);
+  background-color: rgb(194, 194, 194 , 0.9);
   display: flex;
   align-items: center;
   justify-content: space-between;
